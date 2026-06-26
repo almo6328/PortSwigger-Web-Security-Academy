@@ -13,7 +13,11 @@ Every core security module contains its own dedicated directory, isolation of cu
 ### 🔐 1. [Authentication Vulnerabilities](./Authentication-Vulnerabilities/)
 Flaws and logical errors within authentication schemes, session management, and multi-factor mechanisms.
 * **Sub-Module:** [Password-Based Login Vulnerabilities](./Authentication-Vulnerabilities/Password-Based-Login/) `[Completed]` - Information disclosure via timing, flawed business logic bypasses, and account lockout enumeration.
-* **Sub-Module:** Multi-Factor Authentication (MFA) `[In Progress]` - Analyzing two-factor verification logic flaws.
+* **Sub-Module:**
+### 🔐 Multi-Factor Authentication (MFA) Vulnerabilities
+* **Lab 1:** 2FA Bypass via Broken Verification Logic | `[Link to Lab Writeup](path/to/mfa/lab1)`
+* **Lab 2:** 2FA Authentication Bypass via Parameter Tampering & Python Automation (No Rate Limiting) | `[Link to Lab Writeup](path/to/mfa/lab2)`
+
 
 ---
 
