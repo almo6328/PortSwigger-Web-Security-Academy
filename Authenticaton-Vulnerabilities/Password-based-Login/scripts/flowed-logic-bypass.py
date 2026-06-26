@@ -2,18 +2,18 @@ import requests
 import time
 
 # ================== تنظیمات ==================
-LOGIN_URL = "https://0a55006b0419e60f81fd48e60096009d.web-security-academy.net/login" # ← اینو با URL لب خودت عوض کن
+LOGIN_URL = "https://0a55006b0419e60f81fd48e60096009d.web-security-academy.net/login" # ← اینو با URL  خودت عوض کن
 
 USERNAME = "carlos"          # یوزر هدف
-GOOD_USER = "wiener"         # یوزر خوب خودت
-GOOD_PASS = "peter"          # پسورد خوب خودت
+GOOD_USER = "wiener"         # یوزر صحیح خودت
+GOOD_PASS = "peter"          # پسورد صحیح خودت
 
 # لیست پسوردها 
 PASSWORD_LIST = "passwords.txt"
 
 # بعد از هر چند تا تست بد، یک لاگین خوب انجام بده (برای جلوگیری از بلاک)
 RESET_EVERY = 2              # بعد از هر ۲ تست، یک لاگین خوب
-DELAY = 0                   # تأخیر بین درخواست‌ها (ثانیه) - محافظه‌کارانه
+DELAY = 1                   # تأخیر بین درخواست‌ها (ثانیه) 
 # =============================================
 
 session = requests.Session()
