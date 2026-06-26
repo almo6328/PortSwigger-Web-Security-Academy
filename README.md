@@ -19,8 +19,8 @@ This section documents vulnerabilities identified in Multi-Factor Authentication
 
 | Lab Name | Difficulty | Status | Vulnerability Type | Writeup Link |
 | :--- | :---: | :---: | :--- | :---: |
-| 2FA Bypass via Broken Verification Logic | Practitioner | 🟢 Completed | Business Logic Flaw / Session Hijacking | [View Writeup](./vulnerabilities/mfa/lab1_broken_logic.md) |
-| 2FA Authentication Bypass via Parameter Tampering | Practitioner | 🟢 Completed | Parameter Tampering / No Rate Limiting | [View Writeup](./vulnerabilities/mfa/lab2_bruteforce_automation.md) |
+| 2FA Bypass via Broken Verification Logic | Practitioner | 🟢 Completed | Business Logic Flaw / Session Hijacking | [View Writeup](./Authentication-vulnerabilities/Multi-factor-Authentication/readme.md) |
+| 2FA Authentication Bypass via Parameter Tampering | Practitioner | 🟢 Completed | Parameter Tampering / No Rate Limiting | [View Writeup](./Authentication-vulnerabilities/Multi-factor-Authentication/readme.md)) |
 
 ---
 
