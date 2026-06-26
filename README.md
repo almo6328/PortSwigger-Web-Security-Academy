@@ -13,9 +13,16 @@ Every core security module contains its own dedicated directory, isolation of cu
 ### 🔐 1. [Authentication Vulnerabilities](./Authentication-Vulnerabilities/)
 Flaws and logical errors within authentication schemes, session management, and multi-factor mechanisms.
 * **Sub-Module:** [Password-Based Login Vulnerabilities](./Authentication-Vulnerabilities/Password-Based-Login/) `[Completed]` - Information disclosure via timing, flawed business logic bypasses, and account lockout enumeration.
-* **Sub-Module:** [Multi-Factor Authentication (MFA) Vulnerabilities]
-* **Lab 1:** 2FA Bypass via Broken Verification Logic (./Authentication -vulnerabilities/Multi-factor-Authentication/readme.md)
-* **Lab 2:** 2FA Bypass via Parameter Tampering & Python Automation (No Rate Limiting)(./Authentication -vulnerabilities/Multi-factor-Authentication/readme.md)
+* **Sub-Module:** ## 🔐 Multi-Factor Authentication (MFA) Vulnerabilities
+
+This section documents vulnerabilities identified in Multi-Factor Authentication mechanisms, focusing on business logic flaws, inadequate session state verification, and authentication bypasses due to missing rate limits.
+
+| Lab Name | Difficulty | Status | Vulnerability Type | Writeup Link |
+| :--- | :---: | :---: | :--- | :---: |
+| 2FA Bypass via Broken Verification Logic | Practitioner | 🟢 Completed | Business Logic Flaw / Session Hijacking | [View Writeup](./vulnerabilities/mfa/lab1_broken_logic.md) |
+| 2FA Authentication Bypass via Parameter Tampering | Practitioner | 🟢 Completed | Parameter Tampering / No Rate Limiting | [View Writeup](./vulnerabilities/mfa/lab2_bruteforce_automation.md) |
+
+---
 
 
 
