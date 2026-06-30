@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+import base64
+import hashlib
+import re
+
+def analyze_remember_me_cookie(cookie_value):
+    print(f"[*] Analyzing Cookie: {cookie_value}")
+    try:
+        # Decode Base64 cookie
+        decoded_bytes = base64.b64decode(cookie_value)
+        decoded_str = decoded_bytes.decode('utf-8', errors='ignore')
+        print(f"[+] Decoded String: {decoded_str}")
+        
+        # Check for common structures like user:hash or user:pass
+        if ":" in decoded_str:
+            parts = decoded_str.split(":", 1)
+            username = parts[0]
+            potential_hash = parts[1]
+            print(f"[+] Extracted Username: {username}")
+            print(f"[+] Extracted Hash/Data: {potential_hash}")
+            
+            # Identify Hash Type by length
+            if re.match(r"^[a-fA-F0-9]{32}$", potential_hash):
+                print("[!] Hash Type Identified: MD5 (32 chars)")
+            elif re.match(r"^[a-fA-F0-9]{40}$", potential_hash):
+                print("[!] Hash Type Identified: SHA-1 (40 chars)")
+            elif re.match(r"^[a-fA-F0-9]{64}$", potential_hash):
+                print("[!] Hash Type Identified: SHA-256 (64 chars)")
+        else:
+            print("[-] No clear separator found. Might be custom formatting.")
+            
+    except Exception as e:
+        print(f"[-] Error parsing cookie: {e}")
+
+if __name__ == "__main__":
+    # Example cookie from PortSwigger labs format (carlos:md5(secret))
+    # carlos:518ed25825d7f703e23290dae278631b encoded in base64
+    sample_cookie = "Y2FybG9zOjUxOGVkMjU4MjVkN2Y3MDNlMjMyOWRhZTI3ODYzMWI="
+    analyze_remember_me_cookie(sample_cookie)
