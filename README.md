@@ -22,8 +22,7 @@ This section documents vulnerabilities identified in Multi-Factor Authentication
 | 2FA Bypass via Broken Verification Logic | Practitioner | 🟢 Completed | Business Logic Flaw / Session Hijacking | [View Writeup](./Authentication-vulnerabilities/Multi-factor-Authentication/readme.md) |
 | 2FA Authentication Bypass via Parameter Tampering | Practitioner | 🟢 Completed | Parameter Tampering / No Rate Limiting | [View Writeup](./Authentication-vulnerabilities/Multi-factor-Authentication/readme.md)) |
 
-* **Sub-Mudule**
-* **Other Authentication Mechanisms**
+* **Sub-Mudule**Other Authentication Mechanisms
   * **Password Reset Flaws:** Exploited predictable reset tokens, broken token-to-user binding, and Host Header Injection vectors.
   * **Password Change Flaws:** Bypassed current password verifications and exploited IDOR flaws in password modification endpoints.
   * **Insecure "Remember Me" Cookies:** Reverse-engineered persistent session cookies, analyzed weak hash structures (MD5/SHA-1), and automated token forging using custom Python tools.
