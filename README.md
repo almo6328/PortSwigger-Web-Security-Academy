@@ -29,7 +29,7 @@ This section documents vulnerabilities identified in Multi-Factor Authentication
 
 ---
 ### 🛠️ Featured Tools Developed
-* `remember-me-analyzer.py`: A Python automation tool that decodes persistent cookies, auto-identifies cryptographic hash types based on structural entropy, and extracts credentials.
+* `Base64-Cookie-decoder.py`: A Python automation tool that decodes persistent cookies, auto-identifies cryptographic hash types based on structural entropy, and extracts credentials.
 
 
 ---
