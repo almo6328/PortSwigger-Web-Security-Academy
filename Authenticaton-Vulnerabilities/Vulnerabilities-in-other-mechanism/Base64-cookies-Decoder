@@ -36,4 +36,4 @@ if __name__ == "__main__":
     # Example cookie from PortSwigger labs format (carlos:md5(secret))
     # carlos:518ed25825d7f703e23290dae278631b encoded in base64
     sample_cookie = "Y2FybG9zOjUxOGVkMjU4MjVkN2Y3MDNlMjMyOWRhZTI3ODYzMWI="
-    analyze_remember_me_cookie(sample_cookie) 
+    analyze_remember_me_cookie(sample_cookie)
