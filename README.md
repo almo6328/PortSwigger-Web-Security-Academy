@@ -1,44 +1,46 @@
-# PortSwigger Web Security Academy - Labs & Automation 🚀
+# 🛡️ Offensive Security & Web Penetration Testing Lab
 
-Welcome to my security research repository. This project serves as a structured archive of my methodologies, labs walkthroughs, and custom Python automation scripts developed while solving challenges in the PortSwigger Web Security Academy.
+Welcome to my dedicated cybersecurity repository. This space serves as a professional portfolio documenting my journey through advanced web application security testing, vulnerability research, and custom exploit automation.
 
-Rather than relying purely on default automated tools (like Burp Intruder), my primary focus is understanding core application logic and building programmatic exploits.
-
----
-
-## 📂 Repository Structure & Modules
-
-Every core security module contains its own dedicated directory, isolation of custom scripts, and a localized detailed write-up.
-
-### 🔐 1. [Authentication Vulnerabilities](./Authentication-Vulnerabilities/)
-Flaws and logical errors within authentication schemes, session management, and multi-factor mechanisms.
-* **Sub-Module:** [Password-Based Login Vulnerabilities](./Authentication-Vulnerabilities/Password-Based-Login/) `[Completed]` - Information disclosure via timing, flawed business logic bypasses, and account lockout enumeration.
-* **Sub-Module:** ## 🔐 Multi-Factor Authentication (MFA) Vulnerabilities
-
-This section documents vulnerabilities identified in Multi-Factor Authentication mechanisms, focusing on business logic flaws, inadequate session state verification, and authentication bypasses due to missing rate limits.
-
-| Lab Name | Difficulty | Status | Vulnerability Type | Writeup Link |
-| :--- | :---: | :---: | :--- | :---: |
-| 2FA Bypass via Broken Verification Logic | Practitioner | 🟢 Completed | Business Logic Flaw / Session Hijacking | [View Writeup](./Authentication-vulnerabilities/Multi-factor-Authentication/readme.md) |
-| 2FA Authentication Bypass via Parameter Tampering | Practitioner | 🟢 Completed | Parameter Tampering / No Rate Limiting | [View Writeup](./Authentication-vulnerabilities/Multi-factor-Authentication/readme.md)) |
-
-* **Sub-Mudule:** ## Other Authentication Mechanisms
-  * **Password Reset Flaws:** Exploited predictable reset tokens, broken token-to-user binding, and Host Header Injection vectors.
-  * **Password Change Flaws:** Bypassed current password verifications and exploited IDOR flaws in password modification endpoints.
-  * **Insecure "Remember Me" Cookies:** Reverse-engineered persistent session cookies, analyzed weak hash structures (MD5/SHA-1), and automated token forging using custom Python tools.
-
----
-### 🛠️ Featured Tools Developed
-* `Base64-Cookie-decoder.py`: A Python automation tool that decodes persistent cookies, auto-identifies cryptographic hash types based on structural entropy, and extracts credentials.
-
+## 🎯 Technical Objective
+My core focus lies in mastering offensive cybersecurity strategies, dissecting server-side and client-side web flaws, and automating scanning workflows using targeted Python scripting.
 
 ---
 
+## 🗺️ Repository Structure & Progress Roadmap
 
+| Topic / Vulnerability Module | Lab Platform | Automation Tools Included | Status |
+| :--- | :--- | :--- | :--- |
+| **Authentication Vulnerabilities** | PortSwigger Academy | MFA Bypass / Session Token Checkers | ✅ Completed |
+| **Access Control & Privilege Escalation** | PortSwigger Academy | Proxy Bypass & Parameter Fuzzer | ✅ Completed |
+| **Information Disclosure & Business Logic** | PortSwigger Academy | Logic Flaw Parameter Checkers | 🔄 Next Up |
+| **Server-Side Vulnerabilities (SQLi, SSRF)** | PortSwigger Academy | Custom Exploit Payloaders | ⏳ Scheduled |
 
 ---
 
-## 🛠️ Tech Stack & Tooling
-* **Languages:** Python 3.x (Bespoke exploit automation)
-* **Tools:** Burp Suite Professional (Intruder, Repeater, Grep-Extract, Logger)
-* **Environment:** Linux / Advanced VPS Environments
+## 📂 Module Breakdown
+
+### 🔑 1. Authentication Vulnerabilities (`/Authentication-Vulnerabilities`)
+- Deep dive into broken authentication mechanisms, multi-factor authentication (MFA) bypass vectors, and brute-forcing architectures.
+- Developed custom logic structures to analyze token predictable behaviors.
+
+### 🚧 2. Access Control (`/Access-Control-Vulnerabilities`)
+- Focus on Horizontal/Vertical Privilege Escalation, IDOR vulnerabilities, and bypassing reverse-proxy routing filters.
+- **Featured Script:** `scripts/access_control_fuzzer.py` - A custom tool to automate header fuzzing (`X-Original-URL`, `X-Forwarded-For`) to map out hidden administrative matrices.
+
+---
+
+## 🛠️ Core Tech Stack & Toolkit
+- **Proxy / Interception:** Burp Suite Professional (Configured with custom Firefox testing environment)
+- **Automation Language:** Python 3.x (`requests`, `beautifulsoup4`)
+- **Vulnerability Standards:** OWASP Top 10, CWE
+
+---
+
+## 📈 Industry Footprint
+I document my research findings, lab write-ups, and core methodologies across platforms to build a solid professional portfolio:
+- **GitHub:** Code repositories and automated security scripts.
+- **LinkedIn & X:** Sector summaries, breakdown of complex lab resolutions, and daily security updates.
+
+---
+*Disclaimer: All tools, scripts, and documentation provided within this repository are strictly for educational purposes, authorized penetration testing training, and academic research. Unauthorized testing is strictly prohibited.*
